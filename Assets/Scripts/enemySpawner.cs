@@ -2,17 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject enemyPrefab;
 
-    // Update is called once per frame
+    public float spawnRate = 8f;
+    public float widthOffset = 10f;
+
+    private float timer = 0f;
+
     void Update()
     {
-        
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
+        {
+            SpawnEnemy();
+            timer = spawnRate;
+        }
+    }
+
+    void SpawnEnemy()
+    {
+        float leftBoundary = transform.position.x - widthOffset;
+        float rightBoundary = transform.position.x + widthOffset;
+
+        float randomX = Random.Range(leftBoundary, rightBoundary);
+        Vector3 spawnPosition = new Vector3(randomX, transform.position.y, transform.position.z);
+
+        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
     }
 }

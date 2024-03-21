@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         playerBody = transform;
         cameraTransform = GetComponentInChildren<Camera>().transform;
     }

@@ -12,12 +12,12 @@ public class meepleMovement : MonoBehaviour
     {
         Vector3 direction = player.transform.position - transform.position;
 
-        // Ensure the direction is not zero to avoid division by zero
+        // Ensure the direction is not zero
         if (direction != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
 
-            // Smoothly rotate towards the target rotation
+            // enemy rotation to face player
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, speed * Time.deltaTime);
         }
 
