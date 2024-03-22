@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Gun : MonoBehaviour
 {
     public UnityEvent OnGunShoot;
-    public float FireCooldown;
+    public float FireCooldown = 0;
 
     // Semi auto gun
     public bool Automatic;
@@ -43,7 +43,9 @@ public class Gun : MonoBehaviour
             {
                 if (CurrentCooldown <= 0f)
                 {
+
                     Shoot();
+                    Debug.Log("Shoot");
                     CurrentCooldown = FireCooldown;
                 }
             }

@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         playerBody = transform;
         cameraTransform = GetComponentInChildren<Camera>().transform;
     }
@@ -60,6 +60,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    //translate / tranform simply pushes game objects through other colliders - Using pathfinding can address this.  
 
 }

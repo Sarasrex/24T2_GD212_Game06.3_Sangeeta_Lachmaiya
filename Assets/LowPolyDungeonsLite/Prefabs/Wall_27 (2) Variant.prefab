@@ -29,11 +29,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_27 (2) Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8112832757842210709, guid: 2f6c4572e07a60b43b00e1c4f489a806,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 884b53f294ceee04e930b20df8ea085c, type: 2}
     - target: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806,
         type: 3}
       propertyPath: m_LocalScale.x
